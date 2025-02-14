@@ -19,6 +19,7 @@ import {
 import { Button } from "./ui/button";
 
 import EndCallButton from "./EndCallButton";
+import CodeEditor from "./CodeEditor";
 
 const MeetingRoom = () => {
     const router = useRouter();
@@ -88,7 +89,7 @@ const MeetingRoom = () => {
             <ResizableHandle withHandle />
             {/* RIGHT SIDE - CODE EDITOR  */}
             <ResizablePanel>
-                <h2>Code Editor Here</h2>
+                <CodeEditor />
             </ResizablePanel>
         </ResizablePanelGroup>
     </div>

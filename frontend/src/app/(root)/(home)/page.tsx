@@ -1,6 +1,7 @@
 "use client"
 
 import ActionCard from "@/components/ActionCard";
+import LoaderUI from "@/components/LoaderUI";
 import MeetingModal from "@/components/MeetingModal";
 import { QUICK_ACTIONS } from "@/constants";
 import { useInterviews } from "@/hooks/useInterviews";
@@ -32,7 +33,7 @@ export default function Home() {
     }
   }
 
-  if (isLoading) return <span>Loading...</span>;
+  if (isLoading) return <LoaderUI />;
 
   return (
     <div className="container max-w-7xl mx-auto p-6">
