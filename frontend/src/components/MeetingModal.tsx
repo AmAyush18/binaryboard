@@ -18,6 +18,7 @@ function MeetingModal({ isOpen, onClose, title, isJoinMeeting }: MeetingModalPro
   
     const handleStart = () => {
       if (isJoinMeeting) {
+        // IF user gives full URL we extract meeting Id
         const meetingId = meetingUrl.split("/").pop();
         if (meetingId) joinMeeting(meetingId);
       } else {
@@ -48,7 +49,7 @@ function MeetingModal({ isOpen, onClose, title, isJoinMeeting }: MeetingModalPro
               <Button variant="outline" onClick={onClose}>
                 Cancel
               </Button>
-              <Button onClick={handleStart} disabled={isJoinMeeting && !meetingUrl.trim()}>
+              <Button onClick={handleStart} disabled={isJoinMeeting && !meetingUrl.trim()} className="disabled:cursor-not-allowed">
                 {isJoinMeeting ? "Join Meeting" : "Start Meeting"}
               </Button>
             </div>
