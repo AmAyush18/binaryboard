@@ -131,14 +131,6 @@ function InterviewScheduleUI() {
     (i) => !formData.interviewerIds.includes(i.clerkId)
   );
 
-  if ( !user ) {
-    return (
-      <div>
-        <p>No user found</p>
-      </div>
-    )
-  }
-
   return (
     <div className="container max-w-7xl mx-auto p-6 space-y-8">
       <div className="flex items-center justify-between">

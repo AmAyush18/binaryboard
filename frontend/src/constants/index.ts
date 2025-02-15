@@ -181,4 +181,12 @@ export const TIME_SLOTS = [
   "17:00",
 ];
 
+export const INTERVIEW_CATEGORY = [
+  { id: "upcoming", title: "Upcoming Interviews", variant: "outline" },
+  { id: "completed", title: "Completed", variant: "secondary" },
+  { id: "succeeded", title: "Succeeded", variant: "default" },
+  { id: "failed", title: "Failed", variant: "destructive" },
+] as const;
+
+
 export type QuickActionType = (typeof QUICK_ACTIONS)[number];
